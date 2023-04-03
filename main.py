@@ -120,6 +120,8 @@ elif choice == 2:
 
   binary_list_1 = []
 
+  check_class = 0
+
   n_iterate = 4
 
   print("Enter Decimal Code : ")
@@ -246,13 +248,53 @@ elif choice == 2:
 
       cal_bin += "0"
 
+  
+
     binary_list_1.append(cal_bin)
 
     cal_bin = ""
 
+  
+
   print("\n Calculating The Conversion Pls Wait!!\n")
 
   time.sleep(8)
+
+  check_class = int(decimal_list_1[0])
+
+  
+
+  if check_class <= 127:
+
+    print("This Is Of : A Class")
+
+    print("Subnet Mask Is : 255.0.0.0")
+
+  elif check_class <= 191 and check_class >= 128:
+
+    print("This Is Of : B Class")
+
+    print("Subnet Mask Is : 255.255.0.0")
+
+  elif check_class >= 192 and check_class <= 223:
+
+    print("This Is Of : C Class")
+
+    print("Subnet Mask Is : 255.255.255.0")
+
+  elif check_class >= 224 and check_class <= 239:
+
+    print("This Is Of : D Class this Class Is Reserved for multicasting.")
+
+    print("Subnet Mask Is : 255.255.255.255")
+
+  elif check_class >= 240 and check_class <= 254:
+
+    print("This Is Of : E Class This Class Is Reserved For Experiments.")
+
+    print("Subnet Mask Is : 255.255.255.255")
+
+  time.sleep(2)
 
   print("answer is : {}.{}.{}.{}".format(binary_list_1[0],binary_list_1[1],binary_list_1[2],binary_list_1[3]))
 
@@ -260,3 +302,10 @@ else:
 
   print("WRONG INPUT!!! THANKS FOR USING")
 
+
+    
+  
+
+  
+
+    
